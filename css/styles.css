@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+body {
+    background: #b7e4c7;
+    height: 100dvh;
+}
+
+.form{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-inline: auto;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-inline:auto;
+    padding-bottom: 2em;
+    /* padding: 1em; */
+
+}
+label{
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+ input{
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+ }
+ input[type="submit"]{
+    background: #6c757d;
+    border: 1px solid #b7e4c7;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+ }
+  input[type="submit"]:hover{
+    background: linear-gradient(to right,#56cfe1,#52b788);
+    color: #6c757d;
+    border: 1px solid #6c757d;
+  }
+    input[type="submit"]:active{
+        transform: scale(0.98);
+    }
+    input[type="submit"]:focus{
+        outline: none;
+    }
+    textarea{
+        padding: 1em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 1em;
+        font-family: 'Poppins', sans-serif;
+    }
+.error{
+    color: red;
+    background: #fae1ca;
+    padding: .5em 4em;
+    width: fit-content;
+    font-size: 1.33em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    left: 38%;
+    position: relative;
+    
+}
+.success {
+    color: green;
+    background: #52dda3;
+    padding: .5em 4em;
+    width: fit-content;
+    font-size: 1.33em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    left: 35%;
+    position: sticky;
+
+}
+.focus{
+    outline: inset 2px solid #f9f110;
+}
+
+
+/* media for 320px */
+@media screen and (max-width: 320px){
+    .form{
+        position: relative;
+        top: 28.125em;
+        width:95%; 
+    }
+    form{
+        padding-top: 5em;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .error,.success{
+        left: 15%;
+        width: fit-content;
+        font-size: .9em;
+        top: 20px;
+        position:fixed;
+        padding: .5em 3.3em;
+    }
+
+}
+/* media for 375px */
+@media screen and (max-width: 420px) {
+    .form {
+        position: relative;
+        top: 28.125em;
+        width: 95%;
+    }
+
+    form {
+        padding-top: 5em;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .error,
+    .success {
+        top: 20px;
+        position: fixed;
+        left: 15%;
+        width: fit-content;
+        font-size: .9em;
+    }
+
+}
+/* media 500px */
+@media screen and (max-width: 500px) {
+    .form {
+        position: relative;
+        top: 28.125em;
+        width: 100%;
+    }
+
+    form {
+        padding-top: 5em;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .error,
+    .success {
+        top: 20px;
+        position: fixed;
+        left: 15%;
+        width: fit-content;
+        font-size: .9em;
+    }
+
+}
+/* media 850 */
+@media screen and (max-width: 850px){
+    .form{
+        width:85%;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .success,.error{
+        left: 25%;
+    }
+}
+@media screen and (max-width: 900px) {
+.form {
+        position: relative;
+        top: 30.125em;
+        width: 90%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .success,
+    .error {
+        position: absolute;
+        top: 20px;
+        left: 25%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .form {
+        position: relative;
+        top: 30.125em;
+        width: 75%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .success,
+    .error {
+        left: 15%;
+        width: 57%;
+        position: fixed;
+        top: 20px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .form {
+        position: relative;
+        top: 30.125em;
+        width: 50%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .success,
+    .error {
+        left: 35%;
+        width: 30%;
+        position: fixed;
+        top: 20px;
+    }
+}
